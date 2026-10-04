@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="ru" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M A K F A solum tu | Семья Black Russia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            red: '#e63946',
+                            crimson: '#9d0208',
+                            gold: '#ffb703',
+                            dark: '#0b0c10',
+                            card: '#1f2833',
+                            accent: '#66fcf1'
+                        }
+                    },
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                        orbitron: ['Orbitron', 'sans-serif']
+                    },
+                    animation: {
+                        'pulse-glow': 'pulseGlow 2s infinite',
+                        'float': 'float 4s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        pulseGlow: {
+                            '0%, 100%': { boxShadow: '0 0 15px rgba(230, 57, 70, 0.4)' },
+                            '50%': { boxShadow: '0 0 30px rgba(230, 57, 70, 0.8)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #0b0c10;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        .text-glow-red {
+            text-shadow: 0 0 12px rgba(230, 57, 70, 0.7), 0 0 25px rgba(157, 2, 8, 0.5);
+        }
+        .text-glow-gold {
+            text-shadow: 0 0 12px rgba(255, 183, 3, 0.7);
+        }
+        .bg-grid-pattern {
+            background-image: linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+        .custom-glass {
+            background: rgba(31, 40, 51, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .custom-glass-card {
+            background: linear-gradient(135deg, rgba(31, 40, 51, 0.8) 0%, rgba(11, 12, 16, 0.9) 100%);
+            border: 1px solid rgba(230, 57, 70, 0.2);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .custom-glass-card:hover {
+            border-color: rgba(230, 57, 70, 0.8);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px -10px rgba(230, 57, 70, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-brand-dark min-h-screen flex flex-col justify-between selection:bg-brand-red selection:text-white">
+
+    <!-- Navigation -->
+    <header class="fixed top-0 left-0 w-full z-50 custom-glass border-b border-white/10 px-4 lg:px-8 py-3">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <!-- Family Tag / Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-crimson to-brand-red flex items-center justify-center font-orbitron font-black text-xl text-white shadow-lg shadow-brand-red/30 group-hover:scale-105 transition-transform">
+                    M
+                </div>
+                <div>
+                    <span class="font-orbitron font-black text-lg md:text-xl tracking-wider text-white group-hover:text-brand-red transition-colors">
+                        M A K F A
+                    </span>
+                    <span class="block text-xs font-semibold text-brand-gold -mt-1 tracking-widest uppercase">solum tu</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-8 font-semibold text-sm">
+                <a href="#about" class="text-gray-300 hover:text-brand-red transition-colors flex items-center gap-2">
+                    <i class="fa-solid fa-circle-info text-brand-red"></i> О нас
+                </a>
+                <a href="#stats" class="text-gray-300 hover:text-brand-red transition-colors flex items-center gap-2">
+                    <i class="fa-solid fa-chart-line text-brand-red"></i> Статистика
+                </a>
+                <a href="#location" class="text-gray-300 hover:text-brand-red transition-colors flex items-center gap-2">
+                    <i class="fa-solid fa-map-location-dot text-brand-red"></i> Местоположение
+                </a>
+                <a href="#server" class="text-gray-300 hover:text-brand-red transition-colors flex items-center gap-2">
+                    <i class="fa-solid fa-server text-brand-red"></i> Сервер
+                </a>
+                <a href="https://t.me/chikochikk" target="_blank" rel="noopener noreferrer" class="text-brand-gold hover:text-white transition-colors flex items-center gap-2 font-bold">
+                    <i class="fa-brands fa-telegram text-sky-400"></i> Вступить
+                </a>
+            </nav>
+
+            <!-- YouTube & Telegram Quick Action Buttons -->
+            <div class="flex items-center gap-2 sm:gap-3">
+                <a href="https://t.me/chikochikk" target="_blank" rel="noopener noreferrer" 
+                   class="inline-flex items-center justify-center px-4 py-2.5 rounded-xl font-bold text-white bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 shadow-lg shadow-sky-500/30 transition-all duration-300 active:scale-95 text-xs sm:text-sm">
+                    <span class="flex items-center gap-2">
+                        <i class="fa-brands fa-telegram text-base"></i>
+                        <span>Вступить</span>
+                    </span>
+                </a>
+
+                <a href="https://www.youtube.com/@Sakurako_Mizuno" target="_blank" rel="noopener noreferrer" 
+                   class="inline-flex items-center justify-center px-4 py-2.5 rounded-xl font-bold text-white bg-gradient-to-r from-red-600 to-brand-crimson hover:from-brand-red hover:to-red-600 shadow-lg shadow-red-600/30 transition-all duration-300 active:scale-95 text-xs sm:text-sm">
+                    <span class="flex items-center gap-2">
+                        <i class="fa-brands fa-youtube text-base animate-pulse"></i>
+                        <span class="hidden sm:inline">YouTube</span>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden bg-grid-pattern">
+        <!-- Background Ambient Glows -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-red/15 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-[300px] h-[300px] bg-brand-gold/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            
+            <!-- Game Badge -->
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full custom-glass border border-brand-red/30 mb-8 animate-float">
+                <span class="w-2.5 h-2.5 rounded-full bg-brand-red animate-ping"></span>
+                <span class="text-xs sm:text-sm font-bold uppercase tracking-widest text-gray-200">
+                    Официальная семья <span class="text-brand-red">Black Russia</span>
+                </span>
+            </div>
+
+            <!-- Main Family Name Header -->
+            <h1 class="font-orbitron font-black text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight mb-4 text-white uppercase">
+                <span class="text-glow-red block">M A K F A</span>
+                <span class="text-2xl sm:text-4xl md:text-5xl font-light tracking-[0.3em] text-brand-gold text-glow-gold block mt-2">solum tu</span>
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="max-w-2xl mx-auto text-gray-400 text-base sm:text-lg md:text-xl mb-10 font-medium leading-relaxed">
+                Сила, верность и доминирование на просторах сервера <span class="text-white font-bold underline decoration-brand-red underline-offset-4">Таганрог (#81)</span>. Мы не просто семья — мы братство.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+                <!-- Join Telegram Button (Primary CTA) -->
+                <a href="https://t.me/chikochikk" target="_blank" rel="noopener noreferrer" 
+                   class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-sky-500 via-blue-600 to-indigo-700 text-white font-bold text-lg shadow-xl shadow-sky-500/30 hover:shadow-sky-500/50 hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-3 border border-sky-300/30 group">
+                    <i class="fa-brands fa-telegram text-2xl group-hover:scale-110 transition-transform"></i>
+                    <span>Вступить в семью</span>
+                    <i class="fa-solid fa-arrow-right text-sm group-hover:translate-x-1 transition-transform"></i>
+                </a>
+
+                <!-- YouTube Channel Button -->
+                <a href="https://www.youtube.com/@Sakurako_Mizuno" target="_blank" rel="noopener noreferrer" 
+                   class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-red-600 via-brand-red to-brand-crimson text-white font-bold text-lg shadow-xl shadow-red-600/40 hover:shadow-red-600/60 hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-3 border border-red-400/30 group">
+                    <i class="fa-brands fa-youtube text-2xl group-hover:scale-110 transition-transform"></i>
+                    <span>Наш YouTube</span>
+                </a>
+
+                <!-- Explore Section Button -->
+                <a href="#stats" class="w-full sm:w-auto px-8 py-4 rounded-xl custom-glass text-white font-semibold text-lg hover:bg-white/10 hover:border-white/30 transition-all flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-shield-halved text-brand-gold"></i>
+                    <span>Достижения</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section id="stats" class="py-16 md:py-24 relative bg-brand-dark/80 border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-orbitron font-extrabold text-3xl sm:text-4xl text-white uppercase tracking-wider mb-3">
+                    Статистика <span class="text-brand-red">Семьи</span>
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-brand-red to-brand-gold mx-auto rounded-full"></div>
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Stat Card 1: Members -->
+                <div class="custom-glass-card rounded-2xl p-8 text-center relative overflow-hidden group">
+                    <div class="absolute -right-6 -bottom-6 text-brand-red/10 text-9xl font-black font-orbitron select-none group-hover:text-brand-red/20 transition-colors">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <div class="w-16 h-16 rounded-2xl bg-brand-red/10 border border-brand-red/30 flex items-center justify-center mx-auto mb-6 text-brand-red text-2xl group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-user-shield"></i>
+                    </div>
+                    <div class="font-orbitron font-black text-5xl sm:text-6xl text-white mb-2 tracking-tight">
+                        <span class="counter" data-target="160">0</span>
+                    </div>
+                    <p class="text-brand-gold font-bold uppercase tracking-wider text-sm mb-2">Участники семьи</p>
+                    <p class="text-gray-400 text-xs">Активные и преданные игроки, готовые всегда прийти на помощь</p>
+                </div>
+
+                <!-- Stat Card 2: Vehicles -->
+                <div class="custom-glass-card rounded-2xl p-8 text-center relative overflow-hidden group">
+                    <div class="absolute -right-6 -bottom-6 text-brand-red/10 text-9xl font-black font-orbitron select-none group-hover:text-brand-red/20 transition-colors">
+                        <i class="fa-solid fa-car"></i>
+                    </div>
+                    <div class="w-16 h-16 rounded-2xl bg-brand-gold/10 border border-brand-gold/30 flex items-center justify-center mx-auto mb-6 text-brand-gold text-2xl group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-car-side"></i>
+                    </div>
+                    <div class="font-orbitron font-black text-5xl sm:text-6xl text-white mb-2 tracking-tight">
+                        <span class="counter" data-target="23">0</span>
+                    </div>
+                    <p class="text-brand-gold font-bold uppercase tracking-wider text-sm mb-2">Автомобилей в автопарке</p>
+                    <p class="text-gray-400 text-xs">Элитный транспорт для стягов, стрел и повседневных поездок</p>
+                </div>
+
+                <!-- Stat Card 3: Captures -->
+                <div class="custom-glass-card rounded-2xl p-8 text-center relative overflow-hidden group">
+                    <div class="absolute -right-6 -bottom-6 text-brand-red/10 text-9xl font-black font-orbitron select-none group-hover:text-brand-red/20 transition-colors">
+                        <i class="fa-solid fa-trophy"></i>
+                    </div>
+                    <div class="w-16 h-16 rounded-2xl bg-brand-red/10 border border-brand-red/30 flex items-center justify-center mx-auto mb-6 text-brand-red text-2xl group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-crosshairs"></i>
+                    </div>
+                    <div class="font-orbitron font-black text-5xl sm:text-6xl text-white mb-2 tracking-tight">
+                        <span class="counter" data-target="32">0</span>
+                    </div>
+                    <p class="text-brand-gold font-bold uppercase tracking-wider text-sm mb-2">Захватов Т3 Сервера</p>
+                    <p class="text-gray-400 text-xs">Уверенные победы в сражениях за самые престижные территории</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Server & Residence Information Section -->
+    <section id="location" class="py-16 md:py-24 relative bg-grid-pattern">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+                
+                <!-- Server Card -->
+                <div id="server" class="custom-glass p-8 md:p-10 rounded-3xl border border-brand-red/30 flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute top-0 right-0 -mr-8 -mt-8 w-40 h-40 bg-brand-red/20 rounded-full blur-3xl"></div>
+                    <div>
+                        <div class="flex items-center gap-3 mb-6">
+                            <span class="p-3 rounded-xl bg-brand-red/20 text-brand-red text-xl">
+                                <i class="fa-solid fa-server"></i>
+                            </span>
+                            <span class="text-xs font-bold uppercase tracking-widest text-brand-gold">Игровой сервер</span>
+                        </div>
+
+                        <h3 class="font-orbitron font-black text-3xl md:text-4xl text-white mb-4">
+                            Таганрог <span class="text-brand-red">#81</span>
+                        </h3>
+
+                        <p class="text-gray-300 leading-relaxed mb-8">
+                            Мы являемся одной из ключевых семей на сервере <strong class="text-white">Таганрог (#81)</strong> в игре <strong class="text-brand-red">Black Russia</strong>. Мы держим высшие позиции и участвуем во всех масштабных ивентах!
+                        </p>
+                    </div>
+
+                    <!-- Server Meta Info Box -->
+                    <div class="bg-black/40 rounded-2xl p-4 border border-white/5 flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="w-3 h-3 rounded-full bg-green-500 animate-ping"></div>
+                            <span class="text-sm font-semibold text-gray-300">Статус на сервере:</span>
+                        </div>
+                        <span class="text-sm font-bold text-green-400 bg-green-500/10 px-3 py-1 rounded-lg border border-green-500/20">
+                            Активны &amp; Доминируем
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Residence Location Card -->
+                <div class="custom-glass p-8 md:p-10 rounded-3xl border border-brand-gold/30 flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute top-0 right-0 -mr-8 -mt-8 w-40 h-40 bg-brand-gold/10 rounded-full blur-3xl"></div>
+                    <div>
+                        <div class="flex items-center gap-3 mb-6">
+                            <span class="p-3 rounded-xl bg-brand-gold/20 text-brand-gold text-xl">
+                                <i class="fa-solid fa-house-chimney-crack"></i>
+                            </span>
+                            <span class="text-xs font-bold uppercase tracking-widest text-brand-gold">База семьи</span>
+                        </div>
+
+                        <h3 class="font-orbitron font-black text-3xl md:text-4xl text-white mb-2">
+                            пгт. Батырево
+                        </h3>
+                        <div class="inline-block bg-brand-red/20 text-brand-red font-mono font-bold px-3 py-1 rounded-lg text-sm mb-6 border border-brand-red/30">
+                            /fp 373
+                        </div>
+
+                        <p class="text-gray-300 leading-relaxed mb-8">
+                            Наш дом расположен в уютном и стратегически важном поселке <strong class="text-white">пгт. Батырево</strong>. Удобный доступ к гаражам, парковке автопарка и ключевым дорогам области.
+                        </p>
+                    </div>
+
+                    <!-- Location Action / Copy Command -->
+                    <div class="bg-black/40 rounded-2xl p-4 border border-white/5 flex items-center justify-between gap-4">
+                        <div class="truncate">
+                            <span class="text-xs text-gray-400 block">Быстрая команда в игре:</span>
+                            <span class="font-mono font-bold text-brand-gold text-sm sm:text-base">/fp 373</span>
+                        </div>
+                        <button onclick="copyToClipboard('/fp 373')" class="px-4 py-2 rounded-xl bg-brand-gold/20 hover:bg-brand-gold/30 text-brand-gold font-bold text-xs transition-colors flex items-center gap-2 border border-brand-gold/30 shrink-0">
+                            <i class="fa-regular fa-copy"></i>
+                            <span id="copy-btn-text">Скопировать</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- YouTube Promotion Section -->
+    <section class="py-16 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="relative rounded-3xl overflow-hidden bg-gradient-to-r from-red-950 via-brand-dark to-black p-8 md:p-12 border border-red-600/30 text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-8">
+                
+                <!-- Glow Effect -->
+                <div class="absolute left-0 top-0 w-full h-full bg-[radial-gradient(circle_at_top_left,rgba(230,57,70,0.2),transparent_50%)] pointer-events-none"></div>
+
+                <div class="max-w-2xl relative z-10">
+                    <div class="inline-flex items-center gap-2 text-red-500 font-bold text-xs uppercase tracking-widest mb-3">
+                        <i class="fa-brands fa-youtube text-lg"></i>
+                        <span>Официальный Канал Семьи</span>
+                    </div>
+                    <h3 class="font-orbitron font-black text-2xl sm:text-3xl md:text-4xl text-white mb-4">
+                        Следи за нашей жизнью на YouTube!
+                    </h3>
+                    <p class="text-gray-300 text-sm sm:text-base">
+                        Захваты территорий, сходки автопарка, фановые моменты и важные новости семьи M A K F A solum tu публикуются на нашем канале.
+                    </p>
+                </div>
+
+                <div class="relative z-10 shrink-0">
+                    <a href="https://www.youtube.com/@Sakurako_Mizuno" target="_blank" rel="noopener noreferrer"
+                       class="px-8 py-5 rounded-2xl bg-red-600 hover:bg-red-500 text-white font-orbitron font-black text-base shadow-2xl shadow-red-600/50 hover:scale-105 transition-all inline-flex items-center gap-3 group">
+                        <span>СМОТРЕТЬ КАНАЛ</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-sm group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Telegram Banner Section -->
+    <section class="pb-16 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="relative rounded-3xl overflow-hidden bg-gradient-to-r from-sky-950 via-slate-900 to-black p-8 md:p-12 border border-sky-500/30 text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-8">
+                
+                <div class="max-w-2xl relative z-10">
+                    <div class="inline-flex items-center gap-2 text-sky-400 font-bold text-xs uppercase tracking-widest mb-3">
+                        <i class="fa-brands fa-telegram text-lg"></i>
+                        <span>Набор в семью открыт</span>
+                    </div>
+                    <h3 class="font-orbitron font-black text-2xl sm:text-3xl md:text-4xl text-white mb-4">
+                        Хочешь стать частью M A K F A solum tu?
+                    </h3>
+                    <p class="text-gray-300 text-sm sm:text-base">
+                        Пиши личное сообщение лидеру в Telegram для вступления, проверки правил и получения ранга.
+                    </p>
+                </div>
+
+                <div class="relative z-10 shrink-0">
+                    <a href="https://t.me/chikochikk" target="_blank" rel="noopener noreferrer"
+                       class="px-8 py-5 rounded-2xl bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white font-orbitron font-black text-base shadow-2xl shadow-sky-500/40 hover:scale-105 transition-all inline-flex items-center gap-3 group">
+                        <span>НАПИСАТЬ В ТГ (@chikochikk)</span>
+                        <i class="fa-solid fa-paper-plane text-sm group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-white/10 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+                
+                <!-- Left: Branding -->
+                <div>
+                    <div class="font-orbitron font-black text-2xl text-white tracking-wider mb-1">
+                        M A K F A <span class="text-brand-gold text-lg">solum tu</span>
+                    </div>
+                    <p class="text-xs text-gray-500">
+                        Игровое сообщество Black Russia • Сервер Таганрог (#81)
+                    </p>
+                </div>
+
+                <!-- Middle: Quick YouTube Link -->
+                <div>
+                    <a href="https://www.youtube.com/@Sakurako_Mizuno" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-red-500 transition-colors text-sm font-semibold inline-flex items-center gap-2">
+                        <i class="fa-brands fa-youtube text-red-600 text-lg"></i>
+                        <span>youtube.com/@Sakurako_Mizuno</span>
+                    </a>
+                </div>
+
+                <!-- Right: Copyright -->
+                <div class="text-xs text-gray-500">
+                    &copy; <span id="year"></span> M A K F A solum tu. Все права защищены.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts for stats counting and copying functionality -->
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Copy command to clipboard fallback method
+        function copyToClipboard(text) {
+            const tempInput = document.createElement('input');
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            
+            try {
+                document.execCommand('copy');
+                const btnText = document.getElementById('copy-btn-text');
+                const originalText = btnText.textContent;
+                btnText.textContent = 'Скопировано!';
+                btnText.classList.add('text-green-400');
+                
+                setTimeout(() => {
+                    btnText.textContent = originalText;
+                    btnText.classList.remove('text-green-400');
+                }, 2000);
+            } catch (err) {
+                console.error('Не удалось скопировать:', err);
+            }
+            
+            document.body.removeChild(tempInput);
+        }
+
+        // Animated Counters for Stats
+        document.addEventListener('DOMContentLoaded', () => {
+            const counters = document.querySelectorAll('.counter');
+            const speed = 200; // Lower is faster
+
+            const startCounters = () => {
+                counters.forEach(counter => {
+                    const updateCount = () => {
+                        const target = +counter.getAttribute('data-target');
+                        const count = +counter.innerText;
+                        const inc = target / speed;
+
+                        if (count < target) {
+                            counter.innerText = Math.ceil(count + inc);
+                            setTimeout(updateCount, 25);
+                        } else {
+                            counter.innerText = target;
+                        }
+                    };
+                    updateCount();
+                });
+            };
+
+            // Intersection Observer to trigger counters when visible
+            let observerOptions = {
+                threshold: 0.3
+            };
+
+            let observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        startCounters();
+                        observer.disconnect(); // Run once
+                    }
+                });
+            }, observerOptions);
+
+            const statsSection = document.getElementById('stats');
+            if (statsSection) {
+                observer.observe(statsSection);
+            } else {
+                startCounters();
+            }
+        });
+    </script>
+</body>
+</html>
